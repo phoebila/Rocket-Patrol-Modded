@@ -5,8 +5,21 @@ class Menu extends Phaser.Scene {
 
     preload() {
         // load images/tile sprites
-        this.load.image('rocket', "./assets/rocket.png")
+
+        // now nyan cat
+        this.load.image('nyan-cat', "./assets/nyan-cat.gif")
+
+        // load nyan spritesheet
+        // this.load.spritesheet('nyan-cat', './assets/nyan-cat-spritesheet.png', {
+        //   frameWidth: 64,
+        //   frameHeight: 32,
+        //   startFrame: 0,
+        //   endFrame: 9
+        // })
+
+        // now nyan rainbow
         this.load.image('spaceship', './assets/spaceship.png')
+
         this.load.image('starfield', './assets/starfield.png')
 
         // load spritesheet
@@ -21,9 +34,18 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx-select', './assets/sfx-select.wav')
         this.load.audio('sfx-explosion', './assets/sfx-explosion.wav')
         this.load.audio('sfx-shot', './assets/sfx-shot.wav')
+        
+        //adding nyan audio
+        this.load.audio('sfx-nyan', './assets/nyan-music.mp3')
+      
       }
 
     create() {
+
+        // adding music WORKS!!!
+        var music = this.sound.add('sfx-nyan');
+        music.setLoop(true);
+        music.play();
 
         // animation configuration
         this.anims.create({
