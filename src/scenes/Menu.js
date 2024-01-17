@@ -4,9 +4,8 @@ class Menu extends Phaser.Scene {
     }
 
     preload() {
-        // load images/tile sprites
 
-        // now nyan cat
+        // rocket -> now nyan cat
         this.load.image('nyan-cat', "./assets/nyan-cat.gif")
 
         // load nyan spritesheet
@@ -17,8 +16,8 @@ class Menu extends Phaser.Scene {
         //   endFrame: 9
         // })
 
-        // now nyan rainbow
-        this.load.image('spaceship', './assets/spaceship.png')
+        // spaceships -> now nyan rainbow
+        this.load.image('nyan-rainbow', './assets/spaceship.png')
 
         this.load.image('starfield', './assets/starfield.png')
 

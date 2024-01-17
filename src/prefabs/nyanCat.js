@@ -1,5 +1,5 @@
-// Rocket prefab
-class Rocket extends Phaser.GameObjects.Sprite {
+// nyanCat prefab
+class nyanCat extends Phaser.GameObjects.Sprite {
     constructor(scene, x, y, texture, frame) {
       super(scene, x, y, texture, frame)
   
@@ -36,7 +36,7 @@ class Rocket extends Phaser.GameObjects.Sprite {
         }
     }
 
-     // reset rocket to "ground"
+     // reset nyanCat to "ground"
      reset() {
         this.isFiring = false
         this.y = game.config.height - borderUISize - borderPadding
