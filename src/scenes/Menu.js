@@ -6,7 +6,7 @@ class Menu extends Phaser.Scene {
     preload() {
 
         // rocket -> now nyan cat
-        this.load.image('nyan-cat', "./assets/nyan-cat.gif")
+        this.load.image('nyan-cat', "./assets/balloon.gif")
 
         // load nyan spritesheet
         // this.load.spritesheet('nyan-cat', './assets/nyan-cat-spritesheet.png', {
@@ -58,8 +58,8 @@ class Menu extends Phaser.Scene {
         let menuConfig = {
             fontFamily: 'pixel_custom',
             fontSize: '16px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
+            backgroundColor: '#0F4D8F',
+            color: '#000000',
             align: 'right',
             padding: {
             top: 8,
@@ -67,10 +67,11 @@ class Menu extends Phaser.Scene {
             },
             fixedWidth: 0
         }      
+
         // display menu text
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to fire', menuConfig).setOrigin(0.5)
-        menuConfig.backgroundColor = '#00FF00'
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'NYAN PATROL', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to release', menuConfig).setOrigin(0.5)
+        menuConfig.backgroundColor = '#0F4D8F'
         menuConfig.color = '#000'
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5)
 

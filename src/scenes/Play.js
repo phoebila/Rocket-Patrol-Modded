@@ -9,15 +9,15 @@ class Play extends Phaser.Scene {
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0)
 
         // green UI background
-        this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0x00FF00).setOrigin(0, 0)
-        // white borders
-        this.add.rectangle(0, 0, game.config.width, borderUISize, 0xFFFFFF).setOrigin(0, 0)
-        this.add.rectangle(0, game.config.height - borderUISize, game.config.width, borderUISize, 0xFFFFFF).setOrigin(0, 0)
-        this.add.rectangle(0, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0);
-        this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0, 0)
+        this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0x62289c).setOrigin(0, 0)
+        // pink borders
+        this.add.rectangle(0, 0, game.config.width, borderUISize, 0xe69cc0).setOrigin(0, 0)
+        this.add.rectangle(0, game.config.height - borderUISize, game.config.width, borderUISize, 0xe69cc0).setOrigin(0, 0)
+        this.add.rectangle(0, 0, borderUISize, game.config.height, 0xe69cc0).setOrigin(0, 0);
+        this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xe69cc0).setOrigin(0, 0)
 
         // add rocket (p1) --> now nyan cat
-        this.p1nyanCat = new nyanCat(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'nyan-cat').setOrigin(0.5, 0)
+        this.p1nyanCat = new nyanCat(this, game.config.width/2, game.config.height - borderUISize - 6*borderPadding, 'nyan-cat').setOrigin(0.5, 0)
 
         // add spaceships (x3) --> nyanRainbow
         this.ship01 = new nyanRainbow(this, game.config.width + borderUISize*6, borderUISize*4, 'nyan-rainbow', 0, 30).setOrigin(0, 0)
@@ -37,8 +37,8 @@ class Play extends Phaser.Scene {
         let scoreConfig = {
             fontFamily: 'pixel_custom',
             fontSize: '16px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
+            backgroundColor: '#b3325f',
+            color: '#000',
             align: 'right',
             padding: {
             top: 5,
