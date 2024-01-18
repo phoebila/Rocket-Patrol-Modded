@@ -56,14 +56,14 @@ class Menu extends Phaser.Scene {
         // this.add.text(20, 20, "Rocket Patrol Menu")
         // this.scene.start("playScene")
         let menuConfig = {
-            fontFamily: 'pixel',
+            fontFamily: 'pixel_custom',
             fontSize: '16px',
             backgroundColor: '#F3B141',
             color: '#843605',
             align: 'right',
             padding: {
-            top: 5,
-            bottom: 5,
+            top: 8,
+            bottom: 8,
             },
             fixedWidth: 0
         }      
