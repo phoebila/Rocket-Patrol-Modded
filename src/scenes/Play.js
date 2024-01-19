@@ -5,7 +5,7 @@ class Play extends Phaser.Scene {
 
     init(timer) {
         console.log(`init: ${timer}`);
-        shotClock = timer
+        shotClock = timer/1000
     }
 
     create() {
@@ -73,8 +73,10 @@ class Play extends Phaser.Scene {
 
         // 60-second play clock
         scoreConfig.fixedWidth = 0
+
         // adding clock display
-        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, this.updateClock(), timeConfig)
+        // how to update clock text in seconds?
+        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, shotClock, timeConfig)
 
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5)
@@ -101,7 +103,8 @@ class Play extends Phaser.Scene {
             this.ship01.update()           // update spaceships (x3)
             this.ship02.update()
             this.ship03.update()
-            this.updateClock(shotClock) //update shot clock
+
+            this.updateClock()              //update shot clock
         }
 
         // check collisions
@@ -150,10 +153,10 @@ class Play extends Phaser.Scene {
     }
 
     updateClock(){
-        while (!this.gameOver && shotClock != 0){
-            shotClock = (game.settings.gameTimer/1000) - 1
-            // console.log(`shot clock: ${shotClock}`);
-            return shotClock
+        if (!this.gameOver && shotClock != 0){
+            shotClock -= 1
+            console.log(`shot clock: ${shotClock}`);
+            return `${shotClock}`
         }
 
     }
