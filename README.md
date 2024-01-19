@@ -7,7 +7,7 @@
     - Explosion -> moving rainbow
 
 - added random moving speeds for poptarts + nyan, depending on difficulty
-- added custom text font
+- added custom text font (not working on github pages?)
 - added shot clock (Wip)
 
 todo:
