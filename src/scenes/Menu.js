@@ -42,7 +42,7 @@ class Menu extends Phaser.Scene {
     create() {
 
         // adding music WORKS!!!
-        var music = this.sound.add('sfx-nyan', {volume: .2});
+        var music = this.sound.add('sfx-nyan', {volume: .1});
         music.setLoop(true);
         music.play();
 
