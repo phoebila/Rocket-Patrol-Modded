@@ -8,4 +8,4 @@
 
 - added random moving speeds for poptarts + nyan, depending on difficulty
 - added custom text font
-- added shot clock
+- added shot clock (Wip)
