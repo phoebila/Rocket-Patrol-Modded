@@ -10,10 +10,10 @@ class Menu extends Phaser.Scene {
 
         // load nyan spritesheet
         // this.load.spritesheet('nyan-cat', './assets/nyan-cat-spritesheet.png', {
-        //   frameWidth: 64,
-        //   frameHeight: 32,
+        //   frameWidth: 480,
+        //   frameHeight: 64,
         //   startFrame: 0,
-        //   endFrame: 9
+        //   endFrame: 11
         // })
 
         // spaceships -> now nyan rainbow
@@ -84,7 +84,7 @@ class Menu extends Phaser.Scene {
         if (Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             // easy mode
             game.settings = {
-              spaceshipSpeed: 3,
+              spaceshipSpeed: Phaser.Math.Between(3, 5),
               gameTimer: 60000    
             }
             this.sound.play('sfx-select')
@@ -93,7 +93,7 @@ class Menu extends Phaser.Scene {
           if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
             // hard mode
             game.settings = {
-              spaceshipSpeed: 4,
+              spaceshipSpeed: Phaser.Math.Between(7, 10),
               gameTimer: 45000    
             }
             this.sound.play('sfx-select')

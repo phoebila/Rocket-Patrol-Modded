@@ -51,8 +51,27 @@ class Play extends Phaser.Scene {
         // GAME OVER flag
         this.gameOver = false
 
+        // display clock
+        let timeConfig = {
+            fontFamily: 'pixel_custom',
+            fontSize: '16px',
+            backgroundColor: '#5087b5',
+            color: '#000',
+            align: 'right',
+            padding: {
+            top: 5,
+            bottom: 5,
+            },
+            fixedWidth: 100
+        }
+
+        function timerCountdown (){
+
+        }
+
         // 60-second play clock
         scoreConfig.fixedWidth = 0
+        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, this.time.delayedCall, timeConfig)
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5)
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or ← for Menu', scoreConfig).setOrigin(0.5)
