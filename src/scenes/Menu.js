@@ -97,7 +97,7 @@ class Menu extends Phaser.Scene {
               gameTimer: 45000    
             }
             this.sound.play('sfx-select')
-            this.scene.start('playScene')    
+            this.scene.start('playScene', game.settings.gameTimer)    
           }
       }
 }

@@ -3,6 +3,10 @@ class Play extends Phaser.Scene {
         super('playScene')
     }
 
+    init(timer) {
+        console.log(timer);
+    }
+
     create() {
 
         // place tile sprite
@@ -65,9 +69,6 @@ class Play extends Phaser.Scene {
             fixedWidth: 100
         }
 
-        function timerCountdown (){
-
-        }
 
         // 60-second play clock
         scoreConfig.fixedWidth = 0
