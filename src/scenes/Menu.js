@@ -41,11 +41,6 @@ class Menu extends Phaser.Scene {
 
     create() {
 
-        // adding music WORKS!!!
-        var music = this.sound.add('sfx-nyan', {volume: .1});
-        music.setLoop(true);
-        music.play();
-
         // animation configuration
         this.anims.create({
             key: 'explode',

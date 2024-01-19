@@ -84,6 +84,11 @@ class Play extends Phaser.Scene {
 
             this.gameOver = true
         }, null, this)
+
+        // adding music WORKS!!!
+        var music = this.sound.add('sfx-nyan', {volume: .1});
+        music.setLoop(true);
+        music.play();
     }
 
     update() {
@@ -94,6 +99,8 @@ class Play extends Phaser.Scene {
 
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             this.scene.start("menuScene")
+            // stopping the music
+            music.stop()
         }
 
         this.starfield.tilePositionX -= 4
