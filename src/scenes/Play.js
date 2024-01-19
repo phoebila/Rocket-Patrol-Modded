@@ -70,7 +70,6 @@ class Play extends Phaser.Scene {
             fixedWidth: 100
         }
 
-
         // 60-second play clock
         scoreConfig.fixedWidth = 0
 
@@ -162,7 +161,7 @@ class Play extends Phaser.Scene {
     updateClock(){
         if (!this.gameOver && shotClock != 0){
             shotClock -= 1
-            console.log(`shot clock: ${shotClock}`);
+            // console.log(`shot clock: ${shotClock}`);
             return `${shotClock}`
         }
 

@@ -9,3 +9,7 @@
 - added random moving speeds for poptarts + nyan, depending on difficulty
 - added custom text font
 - added shot clock (Wip)
+
+todo:
+- make nyan cat move -> spritesheet (update on fire)
+- fix shot clock
