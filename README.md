@@ -12,5 +12,4 @@
 - added music
 
 todo:
-- make nyan cat move -> spritesheet (update on fire)
 - fix shot clock
