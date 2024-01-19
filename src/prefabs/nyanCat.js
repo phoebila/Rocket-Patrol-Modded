@@ -7,7 +7,7 @@ class nyanCat extends Phaser.GameObjects.Sprite {
       scene.add.existing(this)
       this.isFiring = false
       this.moveSpeed = 2
-      this.sfxShot = scene.sound.add('sfx-shot')
+      this.sfxShot = scene.sound.add('sfx-shot', {volume: .2})
 
     }
 
