@@ -75,7 +75,7 @@ class Play extends Phaser.Scene {
 
         // adding clock display
         // how to update clock text in seconds?
-        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, shotClock -= 1, timeConfig)
+        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, `${game.settings.gameTimer}`, timeConfig)
 
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5)
