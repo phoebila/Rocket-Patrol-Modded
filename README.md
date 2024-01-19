@@ -3,7 +3,9 @@
 ## Mods:
 - Reskinned:
     - Rocket -> Nyan 
-    - Spaceships -> rainbow
+    - Spaceships -> poptarts
     - Explosion -> moving rainbow
 
-- Extends rainbow per nyan cat shot at rainbow
+- added random moving speeds for poptarts + nyan, depending on difficulty
+- added custom text font
+- added shot clock
