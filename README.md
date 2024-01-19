@@ -9,6 +9,7 @@
 - added random moving speeds for poptarts + nyan, depending on difficulty
 - added custom text font (not working on github pages?)
 - added shot clock (Wip)
+- added music
 
 todo:
 - make nyan cat move -> spritesheet (update on fire)
