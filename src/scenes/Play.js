@@ -60,7 +60,7 @@ class Play extends Phaser.Scene {
         let timeConfig = {
             fontFamily: 'pixel_custom',
             fontSize: '16px',
-            backgroundColor: '#5087b5',
+            backgroundColor: '#b3325f',
             color: '#000',
             align: 'right',
             padding: {
@@ -75,7 +75,7 @@ class Play extends Phaser.Scene {
 
         // adding clock display
         // how to update clock text in seconds?
-        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, shotClock, timeConfig)
+        this.add.text(borderUISize + 43*borderPadding, borderUISize + borderPadding*2, shotClock -= 1, timeConfig)
 
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5)
@@ -102,13 +102,11 @@ class Play extends Phaser.Scene {
 
         this.starfield.tilePositionX -= 4
 
-        if(!this.gameOver) {               
+        if(!this.gameOver) {         
             this.p1nyanCat.update()         // update nyanCat sprite
             this.ship01.update()           // update spaceships (x3)
             this.ship02.update()
             this.ship03.update()
-
-            this.updateClock()              //update shot clock
         }
 
         // check collisions
@@ -152,18 +150,9 @@ class Play extends Phaser.Scene {
         // score add and text update
         this.p1Score += ship.points
         this.scoreLeft.text = this.p1Score
-        
         this.sound.play('sfx-explosion', {volume: .2})
     }
 
-    updateClock(){
-        if (!this.gameOver && shotClock != 0){
-            shotClock -= 1
-            // console.log(`shot clock: ${shotClock}`);
-            return `${shotClock}`
-        }
-
-    }
 }
 
 let shotClock = 0

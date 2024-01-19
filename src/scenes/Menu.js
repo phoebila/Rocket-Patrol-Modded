@@ -8,14 +8,6 @@ class Menu extends Phaser.Scene {
         // rocket -> now nyan cat
         this.load.image('nyan-cat', "./assets/balloon.gif")
 
-        // load nyan spritesheet
-        // this.load.spritesheet('nyan-cat', './assets/nyan-cat-spritesheet.png', {
-        //   frameWidth: 480,
-        //   frameHeight: 64,
-        //   startFrame: 0,
-        //   endFrame: 11
-        // })
-
         // spaceships -> now nyan rainbow
         this.load.image('nyan-rainbow', './assets/spaceship.png')
 
