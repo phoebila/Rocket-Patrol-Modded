@@ -98,8 +98,6 @@ class Play extends Phaser.Scene {
 
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             this.scene.start("menuScene")
-            // stopping the music
-            music.stop()
         }
 
         this.starfield.tilePositionX -= 4
