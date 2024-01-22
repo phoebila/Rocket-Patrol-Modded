@@ -28,7 +28,10 @@ class Menu extends Phaser.Scene {
         
         //adding nyan audio
         this.load.audio('sfx-nyan', './assets/nyan-music.mp3')
-      
+
+        // TODO: Add 4 new explosion sound effects + randomize which plays
+        // TODO: Create new Menu image 
+
       }
 
     create() {
