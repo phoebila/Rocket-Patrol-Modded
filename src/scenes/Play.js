@@ -3,11 +3,6 @@ class Play extends Phaser.Scene {
         super('playScene')
     }
 
-    init(timer) {
-        console.log(`init: ${timer}`);
-        shotClock = timer/1000
-    }
-
     create() {
 
         // place tile sprite
@@ -75,7 +70,7 @@ class Play extends Phaser.Scene {
 
         // adding clock display
         // how to update clock text in seconds?
-        this.add.text(borderUISize + 40*borderPadding, borderUISize + borderPadding*2, `Time: ${game.settings.gameTimer/1000}`, timeConfig)
+        this.timeText = this.add.text(borderUISize + 40*borderPadding, borderUISize + borderPadding*2, `Time: ${0}`, timeConfig)
 
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5)
@@ -90,7 +85,9 @@ class Play extends Phaser.Scene {
         music.play();
     }
 
-    update() {
+    update(timer) {
+        var gameRunTime = (timer/1000) - 1
+
         // check key input for restart
         if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyRESET)) {
             this.scene.restart()
@@ -102,7 +99,10 @@ class Play extends Phaser.Scene {
 
         this.starfield.tilePositionX -= 4
 
-        if(!this.gameOver) {         
+        if(!this.gameOver) {   
+            //update timer
+            this.timeText.setText("Time: " + Math.round(gameRunTime))
+
             this.p1nyanCat.update()         // update nyanCat sprite
             this.ship01.update()           // update spaceships (x3)
             this.ship02.update()
@@ -154,5 +154,3 @@ class Play extends Phaser.Scene {
     }
 
 }
-
-let shotClock = 0
