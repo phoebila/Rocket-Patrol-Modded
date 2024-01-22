@@ -32,6 +32,8 @@ class Menu extends Phaser.Scene {
         // TODO: Add 4 new explosion sound effects + randomize which plays
         // TODO: Create new Menu image 
 
+        // load new zoomie image 
+
       }
 
     create() {
@@ -75,6 +77,7 @@ class Menu extends Phaser.Scene {
             // easy mode
             game.settings = {
               spaceshipSpeed: Phaser.Math.Between(3, 5),
+              zoomieSpeed: Phaser.Math.Between(6, 9),
               gameTimer: 60000    
             }
             this.sound.play('sfx-select')
@@ -84,6 +87,7 @@ class Menu extends Phaser.Scene {
             // hard mode
             game.settings = {
               spaceshipSpeed: Phaser.Math.Between(7, 10),
+              zoomieSpeed: Phaser.Math.Between(11, 15),
               gameTimer: 45000    
             }
             this.sound.play('sfx-select')

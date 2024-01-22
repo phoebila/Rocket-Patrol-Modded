@@ -24,6 +24,8 @@ class Play extends Phaser.Scene {
         this.ship02 = new nyanRainbow(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'nyan-rainbow', 0, 20).setOrigin(0,0)
         this.ship03 = new nyanRainbow(this, game.config.width, borderUISize*6 + borderPadding*4, 'nyan-rainbow', 0, 10).setOrigin(0,0)
 
+        // add zoomie
+
         // define keys
         keyFIRE = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F)
         keyRESET = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R)
@@ -107,6 +109,8 @@ class Play extends Phaser.Scene {
             this.ship01.update()           // update spaceships (x3)
             this.ship02.update()
             this.ship03.update()
+
+            //update zoomie
         }
 
         // stopping the music from overlapping
@@ -127,6 +131,8 @@ class Play extends Phaser.Scene {
             this.p1nyanCat.reset()
             this.shipExplode(this.ship01)
         }
+
+        // check zoomie collision
       }
 
     checkCollision(nyanCat, ship) {
