@@ -80,9 +80,9 @@ class Play extends Phaser.Scene {
         }, null, this)
 
         // adding music WORKS!!!
-        var music = this.sound.add('sfx-nyan', {volume: .1});
-        music.setLoop(true);
-        music.play();
+        this.music = this.sound.add('sfx-nyan', {volume: .1});
+        this.music.setLoop(true);
+        this.music.play();
     }
 
     update(timer) {
@@ -107,6 +107,11 @@ class Play extends Phaser.Scene {
             this.ship01.update()           // update spaceships (x3)
             this.ship02.update()
             this.ship03.update()
+        }
+
+        // stopping the music from overlapping
+        if (this.gameOver){
+            this.music.stop()
         }
 
         // check collisions
