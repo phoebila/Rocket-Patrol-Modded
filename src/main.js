@@ -1,4 +1,11 @@
 // console.log("hello world")
+// Phoebe Royer 
+// Nyan Patrol
+// ~15 hrs
+
+// MODS ADDED -------------------------------------------
+
+// -------------------------------------------
 
 let config = {
     type: Phaser.AUTO,
