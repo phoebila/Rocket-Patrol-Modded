@@ -30,10 +30,14 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx-nyan', './assets/nyan-music.mp3')
 
         // TODO: Add 4 new explosion sound effects + randomize which plays
+        this.load.audio('explosion-type1', './assets/explosion-type1.wav')
+        this.load.audio('explosion-type2', './assets/explosion-type2.wav')
+        this.load.audio('explosion-type3', './assets/explosion-type3.wav')
+        this.load.audio('explosion-type4', './assets/explosion-type4.wav')
+
         // TODO: Create new Menu image
         this.load.image('main-menu', './assets/mainMenu.png') 
 
-        // load new zoomie image 
 
       }
 

@@ -163,7 +163,20 @@ class Play extends Phaser.Scene {
         this.scoreLeft.text = this.p1Score
         
         // randomize explosion sound effect?
-        this.sound.play('sfx-explosion', {volume: .2})
+        var soundGen = Phaser.Math.Between(1, 4)
+        if (soundGen == 1){
+            this.sound.play('explosion-type1', {volume: 1})
+        }
+        if (soundGen == 2){
+            this.sound.play('explosion-type2', {volume: .2})
+        }
+        if (soundGen == 3){
+            this.sound.play('explosion-type3', {volume: .2})
+        }
+        if (soundGen == 4){
+            this.sound.play('explosion-type4', {volume: .2})
+        }
+        
     }
 
 }
