@@ -30,7 +30,8 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx-nyan', './assets/nyan-music.mp3')
 
         // TODO: Add 4 new explosion sound effects + randomize which plays
-        // TODO: Create new Menu image 
+        // TODO: Create new Menu image
+        this.load.image('main-menu', './assets/mainMenu.png') 
 
         // load new zoomie image 
 
@@ -66,6 +67,10 @@ class Menu extends Phaser.Scene {
         menuConfig.backgroundColor = '#0F4D8F'
         menuConfig.color = '#000'
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5)
+
+        // display main menu
+        this.mainMenu =  this.add.tileSprite(0, 0, 640, 480, 'main-menu').setOrigin(0, 0)
+
 
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
